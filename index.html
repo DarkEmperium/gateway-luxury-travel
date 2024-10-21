@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Getaway Luxury Travel</title>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Icon Link https://fontawesome.com/v4/ -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+        <link rel="icon" type="image/x-icon" href="images/Logo.png">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/preloader.css">
+        <link rel="stylesheet" href="css/navigator.css">
+    </head>
+    <body>
+
+        <!--Website Preloader-->
+        <div id="preloader"><div class="loader"></div></div>
+
+        <section class="header">
+            
+            <!-- Website Logo -->
+            <div class="logo">
+                <img src="images/Logo.png" alt="Getaway Luxury Travel Consultants">
+                <h3>Getaway Luxury Travel</h3>
+            </div>
+        
+            <!-- Navigation Bar -->
+            <div class="navigation">
+                <input type="checkbox" class="navigation__checkbox" id="toggle">
+                <label for="toggle" class="navigation__button"><span class="navigation__icon">&nbsp;</span></label>
+                <nav class="navigation__nav">
+                    <ul class="navigation__list">
+                        <li><a href="#home" class="navigation__link">Home</a></li>
+                        <li><a href="#services" class="navigation__link">Services</a></li>
+                        <li><a href="#categories" class="navigation__link">Categories</a></li>
+                        <li><a href="#review" class="navigation__link">Review</a></li>
+                        <li><a href="#contact" class="navigation__link">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <button class="btn sign-in-button" onclick="toggleLoginForm()">Sign in</button>
+            </div>
+        </section>
+
+        <!-- Login Form Container -->
+        <section id="registration" class="hidden">
+
+            <div class="registration-container">
+
+                <i class='bx bxs-exit' onclick="toggleLoginForm()"></i>
+                <input type="checkbox" id="flip">
+            
+                <div class="cover-container">
+                    <div class="front">
+                        <img src="images/banner-beach.jpg" alt="">
+                        <div class="banner-text">
+                            <span class="text-1">Embark on your next <br> journey with us </span>
+                            <span class="text-2">Log in to explore new destinations</span>
+                        </div>
+                    </div>
+
+                    <div class="back">
+                        <img src="images/banner-city.jpg" alt="">
+                        <div class="banner-text">
+                            <span class="text-1">Join our community <br> and start your journey</span>
+                            <span class="text-2">Sign up now to discover more adventures</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="registration-forms">
+                    <div class="registration-form-content">
+                        <div class="login-form">
+                            <div class="form-title">Login</div>
+
+                            <form action="#">
+                                <div class="form-input-boxes">
+                                    <div class="form-input-box">
+                                        <i class="fas fa-envelope"></i>
+                                        <input type="text" placeholder="Enter your email" required>
+                                    </div>
+                                    <div class="form-input-box">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="password" placeholder="Enter your password" required>
+                                    </div>
+                                    <div class="button form-input-box">
+                                        <input type="submit" value="Submit">
+                                    </div>
+                                    <!-- Forgot Password Link -->
+                                    <div class="forgot-password">
+                                        <a href="#" id="forgotPasswordLink">Forgot Password</a>
+                                    </div>
+                                    <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="signup-form">
+                            <div class="form-title">Sign Up</div>
+                                <form action="#">
+                                    <div class="form-input-boxes">
+                                        <div class="form-input-box">
+                                            <i class="fas fa-user"></i>
+                                            <input type="text" placeholder="Enter your name" required>
+                                        </div>
+                                        <div class="form-input-box">
+                                            <i class="fas fa-envelope"></i>
+                                            <input type="text" placeholder="Enter your email" required>
+                                        </div>
+                                        <!-- Contact Number Row -->
+                                        <div class="form-input-box">
+                                            <i class="fas fa-phone"></i>
+                                            <input type="text" placeholder="Enter your contact number" required>
+                                        </div>
+                                        <div class="form-input-box">
+                                            <i class="fas fa-lock"></i>
+                                            <input type="password" placeholder="Enter your password" required>
+                                        </div>
+                                        <div class="form-input-box">
+                                            <i class="fa-solid fa-circle-check"></i>
+                                            <input type="password" placeholder="Re-confirm your password" required>
+                                        </div>
+                                        <div class="button form-input-box">
+                                            <input type="submit" value="Submit">
+                                        </div>
+                                        <div class="text sign-up-text">Already have an account?<label for="flip">Login now</label></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Anime Banner -->
+        <section class="home" id="home">
+            <div class="swiper home-slider">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide" data-slider="1"><!-- Banner 1 -->
+                        <div class="box " style="background: url(images/tokyo-banner.jpg) no-repeat;">
+                            <div class="content">
+                                <div class="content-header">
+                                    <h3>Tokyo</h3>
+                                    <a href="https://en.wikipedia.org/wiki/Tokyo" class="btn">Learn More !</a>
+                                    <i class='bx bx-play-circle play-video' data-slider="1"></i>
+                                </div>
+                                <div class="video-container">
+                                    <div class="video-box">
+                                        <video id="myvideo" src="images/tokyo-banner-video.mp4" controls></video>
+                                        <i class='bx bx-x-circle close-video' data-slider="1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide" data-slider="2"><!-- Banner 2 -->
+                        <div class="box " style="background: url(images/borabora-banner.jpg) no-repeat;">
+                            <div class="content">
+                                <div class="content-header">
+                                    <h3>Bora Bora</h3>
+                                    <a href="https://en.wikipedia.org/wiki/Bora_Bora" class="btn">Learn More !</a>
+                                    <i class='bx bx-play-circle play-video' data-slider="2"></i>
+                                </div>
+                                <div class="video-container">
+                                    <div class="video-box">
+                                        <video id="myvideo" src="images/borabora-banner-video.mp4" controls></video>
+                                        <i class='bx bx-x-circle close-video' data-slider="2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="swiper-slide" data-slider="3"><!-- Banner 3 -->
+                        <div class="box " style="background: url(images/maldives-banner.jpg) no-repeat;">
+                            <div class="content">
+                                <div class="content-header">
+                                    <h3>Maldives</h3>
+                                    <a href="https://en.wikipedia.org/wiki/Maldives" class="btn">Learn More !</a>
+                                    <i class='bx bx-play-circle play-video' data-slider="3"></i>
+                                </div>
+                                <div class="video-container">
+                                    <div class="video-box">
+                                        <video id="myvideo" src="images/malvides-banner-video.mp4" controls></video>
+                                        <i class='bx bx-x-circle close-video' data-slider="3"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide" data-slider="4"><!-- Banner 4 -->
+                        <div class="box " style="background: url(images/new-york-banner.jpg) no-repeat;">
+                            <div class="content">
+                                <div class="content-header">
+                                    <h3>New York</h3>
+                                    <a href="https://en.wikipedia.org/wiki/New_York_City" class="btn">Learn More !</a>
+                                    <i class='bx bx-play-circle play-video' data-slider="4"></i>
+                                </div>
+                                <div class="video-container">
+                                    <div class="video-box">
+                                        <video id="myvideo" src="images/new-york-banner-video.mp4" controls></video>
+                                        <i class='bx bx-x-circle close-video' data-slider="4"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide" data-slider="5"><!-- Banner 5 -->
+                        <div class="box " style="background: url(images/paris-banner.jpg) no-repeat;">
+                            <div class="content">
+                                <div class="content-header">
+                                    <h3>Paris</h3>
+                                    <a href="https://en.wikipedia.org/wiki/Paris" class="btn">Learn More !</a>
+                                    <i class='bx bx-play-circle play-video' data-slider="5"></i>
+                                </div>
+                                <div class="video-container">
+                                    <div class="video-box">
+                                        <video id="myvideo" src="images/paris-banner-video.mp4" controls></video>
+                                        <i class='bx bx-x-circle close-video' data-slider="5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide" data-slider="6"><!-- Banner 6 -->
+                        <div class="box " style="background: url(images/santorini-banner.jpg) no-repeat;">
+                            <div class="content">
+                                <div class="content-header">
+                                    <h3>Santorini</h3>
+                                    <a href="https://en.wikipedia.org/wiki/Santorini" class="btn">Learn More !</a>
+                                    <i class='bx bx-play-circle play-video' data-slider="6"></i>
+                                </div>
+                                <div class="video-container">
+                                    <div class="video-box">
+                                        <video id="myvideo" src="images/santorini-banner-video.mp4" controls></video>
+                                        <i class='bx bx-x-circle close-video' data-slider="6"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide" data-slider="7"><!-- Banner 7 -->
+                        <div class="box " style="background: url(images/bali-banner.jpg) no-repeat;">
+                            <div class="content">
+                                <div class="content-header">
+                                    <h3>Bali</h3>
+                                    <a href="https://en.wikipedia.org/wiki/Bali" class="btn">Learn More !</a>
+                                    <i class='bx bx-play-circle play-video' data-slider="7"></i>
+                                </div>
+                                <div class="video-container">
+                                    <div class="video-box">
+                                        <video id="myvideo" src="images/bali-banner-video.mp4" controls></video>
+                                        <i class='bx bx-x-circle close-video' data-slider="7"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mouse-button">
+                <a href="#experiences-section"><i class='bx bx-mouse'></i></a>
+                <p>Scroll Down To View More Info</p>
+            </div>
+
+        </section>
+
+        <section class="experiences" id="experiences-section">
+            
+            <div class="experiences-info-container"> 
+                <h1>DESIGN YOUR DREAM JOURNEY WITH GATEWAY LUXURY TRAVEL CONSULTANTS</h1>
+                <p>At Getaway Luxury Travel Consultants, we take pride in crafting bespoke travel experiences that are tailored to your unique preferences. Whether its a private beach escape, a luxury safari, or an unforgettable cultural tour, we deliver travel journeys like no other.</p>
+
+                <a href="#categories" class="btn">Explore The Exclusive Categories</a>
+            </div>
+
+            <div class="about-image">
+                <div class="image-background">
+                    <img src="images/People-Travel.png" alt="People Traveling">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="services-offered" id="services">
+            <div class="services-wrapper">
+                <div class="services-title">
+                    <img src="images/plane-icon.png" alt="plane">
+                    <h2>Our Offered Services</h2>
+                    <p>Discover our comprehensive services, meticulously crafted to better fulfill your journey's every need</p>
+                </div>
+                <div class="services-card-wrapper">
+                    <div class="services-card">
+                        <img src="images/service1.png" alt="Hotel Booking">
+                        <h3>Hotel Booking</h3>
+                        <p>Our hotel booking service ensures you find the perfect accommodation tailored to your needs, whether for business or leisure</p>
+                    </div>
+                    <div class="services-card">
+                        <img src="images/service2.png" alt="Flight Booking">
+                        <h3>Flight Booking</h3>
+                        <p>Book your flights effortlessly with our comprehensive flight booking service, offering competitive prices and flexible options</p>
+                    </div>
+                    <div class="services-card">
+                        <img src="images/service3.png" alt="Destination Booking">
+                        <h3>Destination Booking</h3>
+                        <p>Discover and book exciting destinations with our destination booking service, designed to make your travel planning easy and enjoyable</p>
+                    </div>
+                </div>
+            </div>
+        </section>        
+
+        <section class="categories-container" id="categories">
+            <img src="images/explore-icon.png" alt="explore" id="explore-icon">
+            <h2 class="categories-header">EXPLORE THE LUXURY TRAVEL CATEGORIES</h2>
+            <div class="categories-grid">
+                <div class="categories-card">
+                    <div class="image-container">
+                        <img src="images/beach.jpeg" alt="Package 1">
+                    </div>
+                    <div class="categories-card-details">
+                        <div>
+                            <div class="rating">
+                                <i class='bx bxs-star' id="star"></i>
+                            </div>
+                            <h4>Luxury Beach Stays</h4>
+                            <div class="text">
+                                <p>Indulge in the world most pristine and private beaches, from the Maldives to Bora Bora</p>
+                                <div class="more-content">
+                                    <table>
+                                        <tr>
+                                            <th>Location</th>
+                                            <th>Price</th>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>Maldives 5 Star Resort Package - 7 Nights</td>
+                                            <td>RM 19,470 per pax</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Bora Bora Overwater Bungalows</td>
+                                            <td>RM 17,860 per pax</td>
+                                        </tr>
+                                    </table>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                
+                        <button class="btn read-more-button">View More Info</button>
+                    </div>
+                </div>
+                <div class="categories-card">
+                    <div class="image-container">
+                        <img src="images/tokyo.jpg" alt="Package 2">
+                    </div>
+                    <div class="categories-card-details">
+                        <div>
+                            <div class="rating">
+                                <i class='bx bxs-star' id="star"></i>
+                            </div>
+                            <h4>VIP City Tours</h4>
+                            <div class="text">
+                                <p>Experience iconic cities like Paris, New York, and Tokyo with private guides and exclusive access</p>
+                                <div class="more-content">
+                                    <table>
+                                        <tr>
+                                            <th>Location</th>
+                                            <th>Price</th>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>Paris Private Eiffel Tower Tour</td>
+                                            <td>RM 15,000 per pax</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Tokyo Exclusive Cherry Blossom Viewing</td>
+                                            <td>RM 8,250 per pax</td>
+                                        </tr>
+                                    </table>
+                                    
+                                </div>
+                            </div>
+                        </div>
+        
+                        <button class="btn read-more-button">View More Info</button>
+                    </div>
+                </div>
+                <div class="categories-card">
+                    <div class="image-container">
+                        <img src="images/private-jet.jpg" alt="Package 3">
+                    </div>
+                    <div class="categories-card-details">
+                        <div>
+                            <div class="rating">
+                                <i class='bx bxs-star' id="star"></i>
+                            </div>
+                            <h4>Private Jet Charters</h4>
+                            <div class="text">
+                                <p>Fly in unparalleled luxury with our curated selection of private jets, helicopters, and yacht charters</p>
+                                <div class="more-content">
+                                    <table>
+                                        <tr>
+                                            <th>Location</th>
+                                            <th>Price</th>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>European Private Jet Experience - 7 Days</td>
+                                            <td>RM 86,950 per trip</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Caribbean Island-Hopping by Private Jet</td>
+                                            <td>RM 94,000 per trip</td>
+                                        </tr>
+                                    </table>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <button class="btn read-more-button">View More Info</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="logos-slide">
+            <h2>COLLABORATING PARTNERS</h2>
+            <p>Proudly partnering with industry leaders to bring you exceptional experiences</p>
+            <div class="logos-container">
+                <img src="images/uow-logo.png" alt="Company 1 Logo">
+                <img src="images/intel-logo.png" alt="Company 2 Logo">
+                <img src="images/malaysia_airline_logo.png" alt="Company 3 Logo">
+                <img src="images/qatar-airway-logo.png" alt="Company 4 Logo">
+                <img src="images/tripadvisor-logo.png" alt="Company 5 Logo">
+                <img src="images/booking-logo.png" alt="Company 6 Logo">
+                <img src="images/airasia-logo.png" alt="Company 7 Logo">
+                <img src="images/tesla-logo.png" alt="Company 8 Logo">
+            </div>
+        </section>
+
+        <section class="customer-review" id="review">
+            <div class="review-title">
+                <img src="images/rating-icon.png" alt="rating">
+                <h2>Our Client Says</h2>
+                <p>Don't just take our word for it, read what people say about us</p>
+            </div>
+
+            <div class="review-container">
+                <div class="testimonial reviewSwiper">
+                    <div class="testi-content swiper-wrapper">
+
+                        <div class="slide swiper-slide">
+                            <img src="images/face1.jpg" alt="" class="image" />
+                            <div class="rating">
+                                <i class='bx bxs-star' id="star"></i>
+                            </div>
+                            <p>Absolutely phenomenal service! From the moment I contacted the consultant to the end of my vacation, everything was handled with such precision and care. My vacation was seamless and unforgettable, filled with personalized touches that made every moment special. I highly recommend this exceptional travel consultant</p>
+                            <i class="bx bxs-quote-alt-left quote-icon"></i>
+                            <div class="details">
+                                <span class="name">Amanda Lee</span>
+                            </div>
+                        </div>
+
+                        <div class="slide swiper-slide">
+                            <img src="images/face2.jpg" alt="" class="image" />
+                            <div class="rating">
+                                <i class='bx bxs-star' id="star"></i>
+                            </div>
+                            <p>The best travel experience I've ever had, hands down. The consultant went above and beyond to ensure every detail was perfect, from booking flights and accommodations to providing local tips and itineraries. Everything was perfectly organized and tailored to my needs, making my vacation stress-free and enjoyable</p>
+                            <i class="bx bxs-quote-alt-left quote-icon"></i>
+                            <div class="details">
+                                <span class="name">David Morgan</span>
+                            </div>
+                        </div>
+
+                        <div class="slide swiper-slide">
+                            <img src="images/face3.jpg" alt="" class="image" />
+                            <div class="rating">
+                                <i class='bx bxs-star' id="star"></i>
+                            </div>
+                            <p>Top-notch service! The travel consultant took care of every detail, allowing me to truly relax and enjoy my vacation. From the personalized itinerary to the 24/7 support during my trip, I felt completely taken care of. This made my trip stress-free and thoroughly enjoyable. I couldn't have asked for a better experience</p>
+                            <i class="bx bxs-quote-alt-left quote-icon"></i>
+                            <div class="details">
+                                <span class="name">Jacob Thompson</span>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next nav-btn"></div>
+                <div class="swiper-button-prev nav-btn"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="feedback-page">
+                <button class="btn feedback-button" id="sendFeedbackLink">Send us your feedback !</button>
+                <!-- Feedback Form Popup -->
+                <div id="feedbackModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+                        <h2>Feedback Form</h2>
+                        <form id="feedback-form">
+                            <div class="contact-input-box">
+                                <input type="text" id="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="contact-input-box">
+                                <input type="email" id="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="contact-input-box message-input-box">
+                                <textarea id="message" placeholder="Enter your feedback" required></textarea>
+                            </div>
+                            <div class="rating-container">
+                                <div class="stars-widget">
+                                    <input type="radio" name="rate" id="rate-1">
+                                    <label for="rate-1" class="fas fa-star"></label>
+                                    <input type="radio" name="rate" id="rate-2">
+                                    <label for="rate-2" class="fas fa-star"></label>
+                                    <input type="radio" name="rate" id="rate-3">
+                                    <label for="rate-3" class="fas fa-star"></label>
+                                    <input type="radio" name="rate" id="rate-4">
+                                    <label for="rate-4" class="fas fa-star"></label>
+                                    <input type="radio" name="rate" id="rate-5">
+                                    <label for="rate-5" class="fas fa-star"></label>
+                                </div>
+                                <span class="star-error"></span>
+                            </div>
+                        
+                            <div class="contact-button"> 
+                                <button class="btn" id="submitFeedback">Send Feedback</button>
+                            <div class="success-message"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>       
+        </section>
+
+        <section class="contact-container" id="contact">
+            <div class="contact-title">
+                <img src="images/contact-icon.png" alt="contact">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-content">
+                <div class="left-content">
+
+                    <div class="address detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="topic">Address</div>
+                        <div class="first-text">UOW Malaysia KDU Penang University College</div>
+                        <div class="second-text">Lebuhraya Bandar Cassia, Batu Kawan, 14100, Penang</div>
+                    </div>
+
+                    <div class="phone detail">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="topic">Phone</div>
+                        <div class="first-text">+045636000</div>
+                        <div class="second-text">Gateway Luxury Travel Consultant</div>
+                    </div>
+
+                    <div class="email detail">
+                        <i class="fas fa-envelope"></i>
+                        <div class="topic">Email</div>
+                        <div class="first-text">gatewayluxurytravel@gmail.com</div>
+                    </div>
+                </div>
+
+                <div class="right-content">
+                    <div class="contact-header">Ready to embark on your next adventure ?</div>
+                    <p>Send us a message and let's start planning your dream journey today !</p>
+
+                    <form action="#">
+                        <div class="contact-input-box">
+                            <input type="text" placeholder="Enter your name" id="nameContact">
+                        </div>
+                        <div class="contact-input-box">
+                            <input type="email" placeholder="Enter your email" id="emailContact">
+                        </div>
+                        <div class="contact-input-box message-input-box">
+                            <textarea placeholder="Enter your message" id="messageContact"></textarea>
+                        </div>
+                        <div class="contact-button">
+                            <input type="button" value="Send Now" id="submit-button">
+                        </div>
+                    </form>
+
+                    <!-- Success Notification -->
+                    <span id="success-message" style="display:none; color:green;">Your message has been sent !</span>
+
+                    
+                </div>
+
+            </div>
+        </section>
+
+        <!--Footer Section-->
+        <section class="footer">
+            <div class="icons">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"><i class="fa fa-twitch"></i></a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"><i class="fa fa-steam"></i></a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"><i class="fa fa-youtube-play"></i></a>
+            </div>
+            <h6 style="color: rgb(255, 255, 255);">© <span id = "currentYear"></span> Coded With Visual Studio Code - Website owned by Gateway Luxury Travel Consultants</h6></a>
+            <h6 style="color: rgb(255, 255, 255);">Coded By Chua Jun De Team Copyright Reserved</h6>
+        </section>
+
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="javascript/script.js"></script>
+        <script src="javascript/slider.js"></script>
+    </body>
+</html>
